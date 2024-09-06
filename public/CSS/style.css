@@ -1,0 +1,196 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+.welcome{
+    width:100vw;
+    height: 20vh;
+    background-color: #283618;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #606c38;
+    margin: 0%;
+    position: fixed;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.allUsersLists{
+    width:100%;
+    height: 90%;
+    margin: 0%;
+    padding: 0%;
+}
+ol, ul{
+    list-style: none;
+
+}
+.userItem{
+    width:100%;
+    height: 10%;
+    margin: 0%;
+  
+    margin-top: 2%;
+}
+.userItem:hover{
+    background-color: #dfc3a2;
+}
+.userItem a{
+    text-decoration: none;
+    color: #1f2c10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+}
+
+.usersSection{
+    width:15vw;
+    margin: 0px;
+    height: 80vh;
+    position: fixed;
+    top:20vh;
+    left: 0vw;
+    background-color: #dda15e;
+    overflow-y:auto;
+}
+
+.newsFeed{
+    min-height: 100vh;
+    margin-left: 15vw;
+    margin-top: 20vh;
+    background-color: #fefae0;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+    background-color: #ccd5ae;
+    width:20vw;
+}
+.addUserForm{
+    display: flex;
+    flex-direction: column;
+    width:95%;
+        
+    align-items: center;
+    
+}
+.addUserForm input,.addUserForm textarea{
+    width:80%;
+    margin-top: 5px;
+    padding: 10px;
+}
+.addUserForm input{
+    height: 30px;
+}
+#addPost{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45vh;
+    justify-content: center;
+    align-items: center;
+}
+#addPost input, #addPost textarea,#usernames{
+    width: 65%;
+    margin-top: 5px;
+    border-radius: 12px;
+}
+#addPost input,#usernames{
+    height: 40px;
+}
+
+.addPostBtn{
+    width: 10%;
+    height: 5vh;
+    background-color: #ccd5ae;
+}
+
+.post{
+    width:90%;
+    height: 20vh;
+    background-color: #faedcd;
+    margin: auto;
+    margin-top: 7px;
+    margin-bottom: 3px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.titleAuthor{
+    display: flex;
+    justify-content: space-between;
+}
+.author{
+    font-style: italic;
+}
+.datePosted{
+    width: 95%;
+    text-align: right;
+    font-style:oblique;
+    font-size: 14px;
+}
+.postTitle{
+    color: #452a0d;
+    font-style: bold;
+}
+.userImageDiv{
+    width: 100%;
+    
+    text-align: center;
+}
+#userImage{
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+}
+
+.userCard{
+    width:50vw;
+    background-color: #ccd5ae;
+    border:0.2px solid #dfc3a2;
+    padding: 20px;
+    margin: auto;
+    margin-top: 5vh;
+    border-radius: 15px;
+}
+.userFullName{
+    text-align: center;
+}
+.userPostsTitle{
+    width:50%;
+    margin: auto;
+    text-align: center;
+}
+.deletePost{
+    color: #ccd5ae;
+    background-color: rgb(77, 5, 5);
+    text-decoration: none;
+    padding: 10px;
+    border-radius:8px ;
+}
+.backHomePageDiv{
+    height: 10vh;
+    width:20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backHomePage{
+    color: #ccd5ae;
+    background-color: rgb(77, 5, 5);
+    text-decoration: none;
+    padding: 10px;
+    border-radius:100% 0% 0% 100%  ;
+    
+}

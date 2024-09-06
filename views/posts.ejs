@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Posts</h1>
+    <ul>
+        <% posts.forEach(post => { %>
+            <li><a href="/posts/profile/<%= post.post_id %>"><%= post.title %></a></li>
+        <% }) %>
+    </ul>
+</body>
+</html>

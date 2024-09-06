@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <%- include('header')%>
+
+    <main class="main">
+        <aside class="usersSection">
+            
+            <ul class="allUsersLists">
+                <% users.forEach(user => { %>
+                    <li class="userItem"><a href="/users/<%= user.id %>"><%= user.first_name %>  <%= user.last_name %></a></li>
+                <% }) %>
+            </ul>
+        </aside>
+
+        <section class="newsFeed">
+
+            <form action="/posts/api" method="POST" id="addPost">
+                <input type="text" id="title" name="title" placeholder="Title" required>
+                <textarea name="content" id="contentID" cols="30" rows="10" placeholder="Content" required></textarea>
+                <select name="usernames" id="usernames" form="addPost">
+                    <% users.forEach(user => { %>
+                        <option value="<%= user.id %>"><%= user.first_name %>  <%= user.last_name %></option>
+                    <% }) %>
+                    
+                  </select>
+                <input type="submit" value="Add Post" class="addPostBtn">
+            </form>
+            
+            <div class="allPosts">
+
+                <% results.forEach(result => { %>
+                    <div class="post">
+                        <div class="titleAuthor">
+                            <a href="/posts/profile/<%= result.post_id %>" class="postTitle"><%= result.title %></a> 
+                            <span class="author"> By <%= result.first_name %> <%= result.last_name %></span>
+                        </div>
+                        <p class="postContent"><%= result.content %></p>
+                        <div class="datePosted"><span><%= result.date%></span></div>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+        
+        <section class="forms">
+            
+
+            <form action="/api/users" method="POST" class="addUserForm">
+                <!-- First Name -->
+                <!-- <label for="first_name">First Name</label> -->
+                <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+                
+                <!-- Last Name -->
+                <!-- <label for="last_name">Last Name</label> -->
+                <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+                
+                <!-- Email -->
+                <!-- <label for="email">Email</label> -->
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                
+                <!-- Phone -->
+                <!-- <label for="phone">Phone</label> -->
+                <input type="tel" id="phone" name="phone" placeholder="phone" required>
+                
+                <!-- Username -->
+                <!-- <label for="username">Username</label> -->
+                <input type="text" id="username" name="username" placeholder="username" required>
+                
+                <!-- Password -->
+                <!-- <label for="password">Password</label> -->
+                <input type="password" id="password" name="password" placeholder="password" required>
+                
+                <!-- Date of Birth -->
+                <!-- <label for="date_of_birth">Date of Birth</label> -->
+                <input type="date" id="date_of_birth" name="date_of_birth" required>
+                
+                <!-- Bio -->
+                <!-- <label for="bio">Bio</label> -->
+                <textarea id="bio" name="bio" rows="10" cols="50" placeholder="bio" required></textarea>
+                <input type="submit" value="Add user">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
